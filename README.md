@@ -5,7 +5,7 @@ A premium Next.js 14 application for a dual-brand taxi service platform featurin
 - **Taxi Trails by Uttarakhand Rides**: Experiential mountain tour circuits and pilgrimages
 
 ## Features
- 
+
 - **Modern Tech Stack**: Next.js 14 (App Router), Tailwind CSS, Lucide React Icons
 - **Premium UI/UX**: Ultra-minimalist executive design with strict left-alignment
 - **Responsive Design**: Mobile-first approach with adaptive layouts

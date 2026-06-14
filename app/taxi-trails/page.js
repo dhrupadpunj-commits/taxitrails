@@ -1,6 +1,6 @@
 // app/taxi-trails/page.js
 import Link from 'next/link';
-import { masterPackages } from '@/app/data/catalog';
+import { masterPackages } from '../data/catalog';
 import { MapPin, Calendar, Truck, Users, WhatsApp, CheckCircle, ChevronRight } from 'lucide-react';
 
 export default function TaxiTrails() {
@@ -116,8 +116,7 @@ export default function TaxiTrails() {
                     </button>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           {/* Mobile: Single column stack */}
@@ -159,11 +158,11 @@ export default function TaxiTrails() {
                         <p className="font-medium">₹{pkg.pricing.sedan.toLocaleString()}</p>
                       </div>
                       <div>
-                        <p className="text-slate-500">SUV</p>
+                        <p className="text-slate-500 text-sm">SUV</p>
                         <p className="font-medium">₹{pkg.pricing.suv.toLocaleString()}</p>
                       </div>
                       <div>
-                        <p className="text-slate-500">Innova</p>
+                        <p className="text-slate-500 text-sm">Innova</p>
                         <p className="font-medium">₹{pkg.pricing.innova.toLocaleString()}</p>
                       </div>
                     </div>
@@ -200,8 +199,7 @@ export default function TaxiTrails() {
                     </button>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
 

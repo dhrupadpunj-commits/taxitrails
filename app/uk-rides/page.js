@@ -189,7 +189,7 @@ export default function UttarakhandRides() {
                     value={formData.to || (selectedRoute ? selectedRoute.to : '')}
                     onChange={(e) => setFormData(prev => ({ ...prev, to: e.target.value }))}
                     placeholder="Enter drop-off location"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                     disabled={!!selectedRoute}
                   />
                 </div>
@@ -201,7 +201,7 @@ export default function UttarakhandRides() {
                     value={formData.date}
                     onChange={(e) => setFormData(prev => ({ ...prev, date: e.target.value }))}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                   />
                 </div>
 
@@ -211,14 +211,14 @@ export default function UttarakhandRides() {
                     type="time"
                     value={formData.time}
                     onChange={(e) => setFormData(prev => ({ ...prev, time: e.target.value }))}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="font-medium">Vehicle Type</label>
                   <div className="flex space-x-3">
-                    ['sedan', 'suv', 'innova'].map((vehicle) => (
+                    {['sedan', 'suv', 'innova'].map((vehicle) => (
                       <label key={vehicle} className="flex items-center space-x-2 cursor-pointer flex-1">
                         <input
                           type="radio"
@@ -229,14 +229,14 @@ export default function UttarakhandRides() {
                         />
                         <span className="text-sm">{vehicle.toUpperCase()}</span>
                       </label>
-                    ))
-                  }
+                    ))}
+                  </div>
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full mt-6 flex items-center justify-center px-4 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors disabled:opacity-50"
+                  className="w-full mt-6 flex items-center justify-center px-4 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slice-800 transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Checking Availability...' : 'Check Availability'}
                 </button>
@@ -255,12 +255,12 @@ export default function UttarakhandRides() {
                         <div
                           key={route.id}
                           onClick={() => handleRouteSelect(route)}
-                          className={`p-4 border border-slate-200 rounded-md hover:bg-slate-50 cursor-pointer transition-colors`}
+                          className={`p-4 border border-slice-200 rounded-md hover:bg-slice-50 cursor-pointer transition-colors`}
                         >
                           <div className="flex justify-between items-start">
                             <div>
                               <p className="font-medium">{route.from} → {route.to}</p>
-                              <p className="text-sm text-slate-500">{route.distance} • {route.duration}</p>
+                              <p className="text-slice-500">{route.distance} • {route.duration}</p>
                             </div>
                             <div className="text-right">
                               <p className="font-medium">₹{route.pricing[formData.vehicle]?.toLocaleString()}</p>
@@ -276,14 +276,14 @@ export default function UttarakhandRides() {
 
           {/* Right Column - Route Feed (65%) */}
           <div className="w-[65%]">
-            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+            <div className="bg-slice-50 p-6 rounded-xl border border-slice-200">
               <h2 className="text-xl font-semibold mb-6 flex items-center">
                 <Truck className="w-5 h-5 mr-3" /> Available Routes
               </h2>
 
               {selectedRoute ? (
                 <div className="space-y-6">
-                  <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                  <div className="bg-slice-50 p-6 rounded-xl border border-slice-200">
                     <h3 className="font-semibold mb-4">Booking Summary</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between">
@@ -323,7 +323,7 @@ export default function UttarakhandRides() {
                     <div className="mt-8">
                       <button
                         onClick={handleSubmit}
-                        className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+                        className="w-full flex items-center justify-center px-6 py-3 bg-slice-900 text-white text-sm font-semibold rounded-lg hover:bg-slice-800 transition-colors"
                       >
                         Check Availability & Fare
                       </button>
@@ -360,7 +360,7 @@ export default function UttarakhandRides() {
                             setSelectedRoute(null);
                             setFormData(prev => ({ ...prev, from: '', to: '', date: '', time: '' }));
                           }}
-                          className="w-full flex items-center justify-center px-6 py-3 bg-slate-200 text-slate-800 text-sm font-semibold rounded-lg hover:bg-slate-300 transition-colors"
+                          className="w-full flex items-center justify-center px-6 py-3 bg-slice-200 text-slice-800 text-sm font-semibold rounded-lg hover:bg-slice-300 transition-colors"
                         >
                           Book Another Ride
                         </button>
@@ -370,7 +370,7 @@ export default function UttarakhandRides() {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  <p className="text-slate-600">
+                  <p className="text-slice-600">
                     Select a route from the form on the left to see details and check availability.
                   </p>
 
@@ -379,19 +379,19 @@ export default function UttarakhandRides() {
                       <div
                         key={route.id}
                         onClick={() => handleRouteSelect(route)}
-                        className={`p-6 border border-slate-200 rounded-xl hover:bg-slate-50 cursor-pointer transition-colors`}
+                        className={`p-6 border border-slice-200 rounded-xl hover:bg-slice-50 cursor-pointer transition-colors`}
                       >
                         <div className="flex justify-between items-start mb-3">
                           <h3 className="font-medium">{route.from} → {route.to}</h3>
                           <div className="flex items-center space-x-2">
                             {route.popular && (
-                              <span className="bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded">
+                              <span className="bg-slice-100 text-slice-800 text-xs px-2 py-1 rounded">
                                 Popular
                               </span>
                             )}
                           </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-2 text-sm text-slate-500">
+                        <div className="grid grid-cols-2 gap-2 text-sm text-slice-500">
                           <div>Distance:</div>
                           <div className="text-right">{route.distance}</div>
                           <div>Duration:</div>
@@ -415,7 +415,7 @@ export default function UttarakhandRides() {
         {/* Mobile Layout - Single Vertical Stack */}
         <div className="md:hidden">
           {/* Booking Form */}
-          <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
+          <div className="bg-slice-50 p-6 rounded-xl border border-slice-200 mb-8">
             <h2 className="text-xl font-semibold mb-6 flex items-center">
               <MapPin className="w-5 h-5 mr-3" /> Book Your Ride
             </h2>
@@ -428,7 +428,7 @@ export default function UttarakhandRides() {
                   value={formData.from || (selectedRoute ? selectedRoute.from : '')}
                   onChange={(e) => setFormData(prev => ({ ...prev, from: e.target.value }))}
                   placeholder="Enter pickup location"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                   disabled={!!selectedRoute}
                 />
               </div>
@@ -440,7 +440,7 @@ export default function UttarakhandRides() {
                   value={formData.to || (selectedRoute ? selectedRoute.to : '')}
                   onChange={(e) => setFormData(prev => ({ ...prev, to: e.target.value }))}
                   placeholder="Enter drop-off location"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                   disabled={!!selectedRoute}
                 />
               </div>
@@ -452,7 +452,7 @@ export default function UttarakhandRides() {
                   value={formData.date}
                   onChange={(e) => setFormData(prev => ({ ...prev, date: e.target.value }))}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                 />
               </div>
 
@@ -462,32 +462,32 @@ export default function UttarakhandRides() {
                   type="time"
                   value={formData.time}
                   onChange={(e) => setFormData(prev => ({ ...prev, time: e.target.value }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
+                  className="w-full px-3 py-2 border border-slice-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="font-medium">Vehicle Type</label>
                 <div className="grid gap-3">
-                  ['sedan', 'suv', 'innova'].map((vehicle) => (
+                  {['sedan', 'suv', 'innova'].map((vehicle) => (
                     <label key={vehicle} className="flex items-center space-x-2 cursor-pointer">
                       <input
                         type="radio"
                         value={vehicle}
                         checked={formData.vehicle === vehicle}
                         onChange={(e) => setFormData(prev => ({ ...prev, vehicle: e.target.value }))}
-                        className="h-4 w-4 text-slate-900"
+                        className="h-4 w-4 text-slice-900"
                       />
                       <span className="text-sm">{vehicle.toUpperCase()}</span>
                     </label>
-                  ))
+                  ))}
                 }
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-6 flex items-center justify-center px-4 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors disabled:opacity-50"
+                className="w-full mt-6 flex items-center justify-center px-4 py-3 bg-slice-900 text-white text-sm font-semibold rounded-lg hover:bg-slice-800 transition-colors disabled:opacity-50"
               >
                 {loading ? 'Checking Availability...' : 'Check Availability'}
               </button>
@@ -506,12 +506,12 @@ export default function UttarakhandRides() {
                       <div
                         key={route.id}
                         onClick={() => handleRouteSelect(route)}
-                        className={`p-4 border border-slate-200 rounded-md hover:bg-slate-50 cursor-pointer transition-colors`}
+                        className={`p-4 border border-slice-200 rounded-md hover:bg-slice-50 cursor-pointer transition-colors`}
                       >
                         <div className="flex justify-between items-start">
                           <div>
                             <p className="font-medium">{route.from} → {route.to}</p>
-                            <p className="text-sm text-slate-500">{route.distance} • {route.duration}</p>
+                            <p className="text-slice-500">{route.distance} • {route.duration}</p>
                           </div>
                           <div className="text-right">
                             <p className="font-medium">₹{route.pricing[formData.vehicle]?.toLocaleString()}</p>
@@ -526,13 +526,13 @@ export default function UttarakhandRides() {
 
           {/* Route Details / Booking Summary */}
           {selectedRoute && (
-            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
+            <div className="bg-slice-50 p-6 rounded-xl border border-slice-200 mb-8">
               <h2 className="text-xl font-semibold mb-6 flex items-center">
                 <Truck className="w-5 h-5 mr-3" /> Route Details
               </h2>
 
               <div className="space-y-6">
-                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                <div className="bg-slice-50 p-6 rounded-xl border border-slice-200">
                   <h3 className="font-semibold mb-4">Booking Summary</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between">
@@ -572,7 +572,7 @@ export default function UttarakhandRides() {
                   <div className="mt-6">
                     <button
                       onClick={handleSubmit}
-                      className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+                      className="w-full flex items-center justify-center px-6 py-3 bg-slice-900 text-white text-sm font-semibold rounded-lg hover:bg-slice-800 transition-colors"
                     >
                       Check Availability & Fare
                     </button>
@@ -609,7 +609,7 @@ export default function UttarakhandRides() {
                           setSelectedRoute(null);
                           setFormData(prev => ({ ...prev, from: '', to: '', date: '', time: '' }));
                         }}
-                        className="w-full flex items-center justify-center px-6 py-3 bg-slate-200 text-slate-800 text-sm font-semibold rounded-lg hover:bg-slate-300 transition-colors"
+                        className="w-full flex items-center justify-center px-6 py-3 bg-slice-200 text-slice-800 text-sm font-semibold rounded-lg hover:bg-slice-300 transition-colors"
                       >
                         Book Another Ride
                       </button>
@@ -623,12 +623,12 @@ export default function UttarakhandRides() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-50 py-8 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-600">
+      <footer className="bg-slice-50 py-8 border-t">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slice-600">
           <p>&copy; {new Date().getFullYear()} Uttarakhand Rides. All rights reserved.</p>
           <p className="mt-2 text-sm">
-            <a href="/" className="hover:text-slate-900">Home</a> |
-            <a href="/taxi-trails" className="hover:text-slate-900">Taxi Trails</a>
+            <a href="/" className="hover:text-slice-900">Home</a> |
+            <a href="/taxi-trails" className="hover:text-slice-900">Taxi Trails</a>
           </p>
         </div>
       </footer>
