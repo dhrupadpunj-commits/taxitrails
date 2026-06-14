@@ -393,15 +393,15 @@ export default function UttarakhandRides() {
                         </div>
                         <div className="grid grid-cols-2 gap-2 text-sm text-slate-500">
                           <div>Distance:</div>
-              <div className="text-right">{route.distance}</div>
+                          <div className="text-right">{route.distance}</div>
                           <div>Duration:</div>
-              <div className="text-right">{route.duration}</div>
+                          <div className="text-right">{route.duration}</div>
                           <div>Sedan:</div>
-              <div className="text-right">₹{route.pricing.sedan.toLocaleString()}</div>
+                          <div className="text-right">₹{route.pricing.sedan.toLocaleString()}</div>
                           <div>SUV:</div>
-              <div className="text-right">₹{route.pricing.suv.toLocaleString()}</div>
+                          <div className="text-right">₹{route.pricing.suv.toLocaleString()}</div>
                           <div>Innova:</div>
-              <div className="text-right">₹{route.pricing.innova.toLocaleString()}</div>
+                          <div className="text-right">₹{route.pricing.innova.toLocaleString()}</div>
                         </div>
                       </div>
                     ))}
@@ -462,7 +462,7 @@ export default function UttarakhandRides() {
                   type="time"
                   value={formData.time}
                   onChange={(e) => setFormData(prev => ({ ...prev, time: e.target.value }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slice-500"
                 />
               </div>
 
@@ -481,7 +481,7 @@ export default function UttarakhandRides() {
                       <span className="text-sm">{vehicle.toUpperCase()}</span>
                     </label>
                   ))
-                )
+                }
               </div>
 
               <button
@@ -517,7 +517,7 @@ export default function UttarakhandRides() {
                             <p className="font-medium">₹{route.pricing[formData.vehicle]?.toLocaleString()}</p>
                           </div>
                         </div>
-                      </div>
+                      </div
                     ))}
                 </div>
               </div>
