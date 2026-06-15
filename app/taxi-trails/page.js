@@ -104,16 +104,15 @@ export default function TaxiTrails() {
 
                   {/* Action Button */}
                   <div className="mt-8">
-                    <button
-                      onClick={() => {
-                        // In a real app, this would open WhatsApp with pre-filled message
-                        alert('WhatsApp inquiry feature would open here with package details pre-filled.');
-                      }}
-                      className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-3" />
-                      Inquire via WhatsApp
-                    </button>
+                    <<a
+  href="https://wa.me/919675212169?text=Hi%20I%20am%20interested%20in%20this%20tour%20package"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+>
+  <MessageCircle className="w-5 h-5 mr-3" />
+  Inquire via WhatsApp
+</a>
                   </div>
                 </div>
               </div>
@@ -188,16 +187,15 @@ export default function TaxiTrails() {
 
                   {/* Action Button */}
                   <div className="mt-5">
-                    <button
-                      onClick={() => {
-                        // In a real app, this would open WhatsApp with pre-filled message
-                        alert('WhatsApp inquiry feature would open here with package details pre-filled.');
-                      }}
-                      className="w-full flex items-center justify-center px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
-                    >
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Inquire via WhatsApp
-                    </button>
+                    <a
+  href="https://wa.me/919675212169?text=Hi%20I%20am%20interested%20in%20this%20tour%20package"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+>
+  <MessageCircle className="w-5 h-5 mr-3" />
+  Inquire via WhatsApp
+</a>
                   </div>
                 </div>
               </div>
@@ -220,16 +218,15 @@ export default function TaxiTrails() {
             >
               Book Point-to-Point Transfers
             </Link>
-            <button
-              onClick={() => {
-                // WhatsApp inquiry
-                alert('WhatsApp inquiry feature would open here.');
-              }}
-              className="px-6 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Start WhatsApp Inquiry
-            </button>
+            <a
+  href="https://wa.me/919675212169?text=Hi%20I%20am%20interested%20in%20this%20tour%20package"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+>
+  <MessageCircle className="w-5 h-5 mr-3" />
+  Inquire via WhatsApp
+</a>
           </div>
         </div>
       </main>
