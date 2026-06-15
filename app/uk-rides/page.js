@@ -7,7 +7,7 @@ import {
   Clock,
   Truck,
   Users,
-  WhatsApp,
+  MessageCircle,
   CheckCircle,
   X
 } from 'lucide-react';
@@ -349,7 +349,7 @@ export default function UttarakhandRides() {
                             rel="noopener noreferrer"
                             className="w-full flex items-center justify-center px-6 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
                           >
-                            <WhatsApp className="w-5 h-5 mr-3" />
+                            <MessageCircle className="w-5 h-5 mr-3" />
                             Confirm via WhatsApp
                           </a>
                         </div>
@@ -481,7 +481,6 @@ export default function UttarakhandRides() {
                       <span className="text-sm">{vehicle.toUpperCase()}</span>
                     </label>
                   ))}
-                }
               </div>
 
               <button
@@ -598,7 +597,7 @@ export default function UttarakhandRides() {
                           rel="noopener noreferrer"
                           className="w-full flex items-center justify-center px-6 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
                         >
-                          <WhatsApp className="w-5 h-5 mr-3" />
+                          <MessageCircle className="w-5 h-5 mr-3" />
                           Confirm via WhatsApp
                         </a>
                       </div>
