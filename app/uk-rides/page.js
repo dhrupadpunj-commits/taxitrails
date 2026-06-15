@@ -517,7 +517,7 @@ export default function UttarakhandRides() {
                             <p className="font-medium">₹{route.pricing[formData.vehicle]?.toLocaleString()}</p>
                           </div>
                         </div>
-                      </div
+                      </div>
                     ))}
                 </div>
               </div>
