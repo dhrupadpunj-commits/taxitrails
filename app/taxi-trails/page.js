@@ -104,7 +104,7 @@ export default function TaxiTrails() {
 
                   {/* Action Button */}
                   <div className="mt-8">
-                    <<a
+                    <a
   href="https://wa.me/919675212169?text=Hi%20I%20am%20interested%20in%20this%20tour%20package"
   target="_blank"
   rel="noopener noreferrer"
