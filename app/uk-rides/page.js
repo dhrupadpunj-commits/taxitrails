@@ -481,6 +481,7 @@ export default function UttarakhandRides() {
                       <span className="text-sm">{vehicle.toUpperCase()}</span>
                     </label>
                   ))}
+                </div>
               </div>
 
               <button
