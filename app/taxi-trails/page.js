@@ -1,7 +1,7 @@
 // app/taxi-trails/page.js
 import Link from 'next/link';
 import { masterPackages } from '../data/catalog';
-import { MapPin, Calendar, Truck, Users, WhatsApp, CheckCircle, ChevronRight } from 'lucide-react';
+import { MapPin, Calendar, Truck, Users, MessageCircle, CheckCircle, ChevronRight } from 'lucide-react';
 
 export default function TaxiTrails() {
   return (
@@ -111,12 +111,13 @@ export default function TaxiTrails() {
                       }}
                       className="w-full flex items-center justify-center px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
                     >
-                      <WhatsApp className="w-5 h-5 mr-3" />
+                      <MessageCircle className="w-5 h-5 mr-3" />
                       Inquire via WhatsApp
                     </button>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
 
           {/* Mobile: Single column stack */}
@@ -194,12 +195,13 @@ export default function TaxiTrails() {
                       }}
                       className="w-full flex items-center justify-center px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors"
                     >
-                      <WhatsApp className="w-4 h-4 mr-2" />
+                      <MessageCircle className="w-4 h-4 mr-2" />
                       Inquire via WhatsApp
                     </button>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -225,7 +227,7 @@ export default function TaxiTrails() {
               }}
               className="px-6 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
             >
-              <WhatsApp className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               Start WhatsApp Inquiry
             </button>
           </div>
