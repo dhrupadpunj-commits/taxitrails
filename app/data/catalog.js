@@ -182,10 +182,10 @@ export const generateWhatsAppMessage = (type, data) => {
     message += `*Route:* ${pkg.route}\n`;
     message += `*Vehicle:* ${data.vehicle}\n`;
     message += `*Price:* ${formatPrice(pkg.pricing[data.vehicle.toLowerCase()])}\n`;
-    if data.dates {
+    if (data.dates) {
       message += `*Preferred Dates:* ${data.dates}\n`;
     }
-    if data.notes {
+    if (data.notes) {
       message += `*Special Requests:* ${data.notes}\n`;
     }
     message += `\nPlease provide availability and booking details.`;
@@ -196,7 +196,7 @@ export const generateWhatsAppMessage = (type, data) => {
     message += `*Date:* ${data.date}\n`;
     message += `*Time:* ${data.time}\n`;
     message += `*Vehicle:* ${data.vehicle}\n`;
-    if data.notes {
+    if (data.notes) {
       message += `*Special Requests:* ${data.notes}\n`;
     }
     message += `\nPlease confirm availability and fare.`;
